@@ -18,6 +18,8 @@
         var _g = null;
         var _gs = null;
 
+        var _center = {x: _chart.effectiveWidth() / 2, y: _chart.effectiveHeight() / 2};
+
         _chart._doRender = function () {
             _chart.resetSvg();
 
@@ -50,22 +52,24 @@
                 updateBubbles();
             }
 
-            let center = {x: _chart.effectiveWidth() / 2, y: _chart.effectiveHeight() / 2}
-
             highlightFilter();
 
             _simulation = d3.forceSimulation()
                 .nodes(_chart.data())
                 .on('tick', function () {
-                    _gs.attr('transform', d => `translate(${d.x}, ${d.y})`)
+                    _gs.attr('transform', function (d) {
+                        return 'translate(' + d.x + ',' + d.y + ')';
+                    });
                 });
 
             _simulation
-                .force('x', d3.forceX().strength(FORCE_STRENGTH).x(center.x))
-                .force('y', d3.forceY().strength(FORCE_STRENGTH).y(center.y))
+                .force('x', d3.forceX().strength(FORCE_STRENGTH).x(_center.x))
+                .force('y', d3.forceY().strength(FORCE_STRENGTH).y(_center.y))
                 .force('charge', d3.forceManyBody().strength(charge))
-                .force('collide', d3.forceCollide(d => _chart.bubbleR(d) + 1))
-                .velocityDecay(FRICTION)
+                .force('collide', d3.forceCollide(function (d) {
+                    return _chart.bubbleR(d) + 1;
+                }))
+                .velocityDecay(FRICTION);
         }
 
         function createBubbles() {
@@ -82,7 +86,7 @@
             _circles = _gs
                 .append('circle')
                 .attr('class', _chart.BUBBLE_CLASS)
-                .attr('r', d => {
+                .attr('r', function (d) {
                     d.radius = _chart.bubbleR(d);
                     return d.radius;
                 })
@@ -105,7 +109,7 @@
 
         function updateBubbles() {
             _circles.data(_chart.data())
-                .attr('r', d => {
+                .attr('r', function (d) {
                     d.radius = _chart.bubbleR(d);
                     return d.radius;
                 });
