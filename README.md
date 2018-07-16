@@ -13,15 +13,6 @@ npm install dc-addons --save
 
 You can either include all addons or each on individually as you need them.  To see examples of individual addons see each addon below. The following example will include all addons.
 ```html
-<!-- dc-addons requirements -->
-<link rel="stylesheet" href="bower_components/leaflet/dist/leaflet.css" />
-<script src="bower_components/leaflet/dist/leaflet.js"></script>
-<link rel="stylesheet" href="bower_components/leaflet.markercluster/dist/MarkerCluster.css" />
-<link rel="stylesheet" href="bower_components/leaflet.markercluster/dist/MarkerCluster.Default.css" />
-<script src="bower_components/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=API_KEY"></script>
-<script src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/src/markerclusterer.js"></script>script>
-<script src="bower_components/d3-tip/index.js"></script>
 
 <!-- dc-addons -->
 <link rel="stylesheet" href="bower_components/dc-addons/dist/dc-addons.min.css" />

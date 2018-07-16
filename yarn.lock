@@ -921,7 +921,7 @@ dateformat@~1.0.12:
     meow "^3.3.0"
 
 "dc@https://github.com/dc-js/dc.js/tarball/master":
-  version "3.0.5"
+  version "3.0.2"
   resolved "https://github.com/dc-js/dc.js/tarball/master#278f363fb557c98cb3e595bb36b8235039901465"
   dependencies:
     crossfilter2 "^1.4.5"
