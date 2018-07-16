@@ -10,7 +10,7 @@
     dc.bubbleCloud = function (parent, chartGroup) {
         var _chart = dc.bubbleMixin(dc.capMixin(dc.bubbleChart(parent)));
 
-        var FORCE_STRENGTH = 0.3;
+        var FORCE_STRENGTH = 1;
         var FRICTION = 0.25;
 
         var _simulation = null;
@@ -18,7 +18,7 @@
         var _g = null;
         var _gs = null;
 
-        var _center = {x: _chart.effectiveWidth() / 2, y: _chart.effectiveHeight() / 2};
+        var _center = {x: _chart.width() / 2, y: _chart.height() / 2};
 
         _chart._doRender = function () {
             _chart.resetSvg();
