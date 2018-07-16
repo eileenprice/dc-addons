@@ -1,7 +1,7 @@
 /*!
- * dc-addons v0.13.5
+ * dc-addons-bubble-chart v0.1.0
  *
- * 2018-07-13 15:51:49
+ * 2018-07-16 08:36:43
  *
  */
 if (!dc.utils.getAllFilters) {
