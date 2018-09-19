@@ -11,9 +11,6 @@ module.exports = {
             src: '**/*.js',
             dest: '<%= config.dist %>/',
             ext: '.min.js'
-            // rename: function (dest, src) {
-            //     return dest + src.replace('.js', '.min.js');
-            // }
         }]
     }
 };
