@@ -7,9 +7,6 @@ module.exports = {
             '<%= config.src %>/**/*.js',
         ]
     },
-    tests: {
-        src: '<%= config.tests %>/**/*.js'
-    },
     grunt: {
         src: [
             'Gruntfile.js',

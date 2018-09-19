@@ -20,18 +20,10 @@
     "unused": "vars",
     "globals" : {
         "__dirname": false,
-        "console": false,
-        "crossfilter" : true,
         "d3" : false,
         "dc" : true,
-        "global": false,
-        "io": true,
         "module": false,
         "process": false,
-        "require": false,
-        "L": false,
-        "google": false,
-        "MarkerClusterer": false,
-        "angular": false
+        "require": false
     }
 }

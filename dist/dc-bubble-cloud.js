@@ -1,23 +1,9 @@
 /*!
- * dc-addons-bubble-chart v0.1.0
+ * dc-addons-bubble-chart v0.1.3
  *
- * 2018-07-16 08:36:43
+ * 2018-09-19 14:11:41
  *
  */
-if (!dc.utils.getAllFilters) {
-    dc.utils.getAllFilters = function () {
-        var result = {};
-        var list = dc.chartRegistry.list();
-
-        for (var e in list) {
-            var chart = list[e];
-            result[chart.chartID()] = chart.filters();
-        }
-
-        return result;
-    };
-}
-
 // Code copied and changed from https://github.com/vlandham/gates_bubbles
 
 (function () {
@@ -30,7 +16,7 @@ if (!dc.utils.getAllFilters) {
     dc.bubbleCloud = function (parent, chartGroup) {
         var _chart = dc.bubbleMixin(dc.capMixin(dc.bubbleChart(parent)));
 
-        var FORCE_STRENGTH = 0.3;
+        var FORCE_STRENGTH = 1;
         var FRICTION = 0.25;
 
         var _simulation = null;
@@ -38,7 +24,7 @@ if (!dc.utils.getAllFilters) {
         var _g = null;
         var _gs = null;
 
-        var _center = {x: _chart.effectiveWidth() / 2, y: _chart.effectiveHeight() / 2};
+        var _center = {x: _chart.width() / 2, y: _chart.height() / 2};
 
         _chart._doRender = function () {
             _chart.resetSvg();

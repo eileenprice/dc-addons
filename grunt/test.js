@@ -1,6 +1,8 @@
 module.exports = function (grunt) {
     grunt.registerTask('test', [
-        'jshint:tests',
-        // 'karma:test'
+        'jshint:src',
+        'jshint:grunt',
+        'jscs:src',
+        'jscs:grunt'
     ]);
 };
