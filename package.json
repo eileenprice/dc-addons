@@ -1,6 +1,7 @@
 {
   "name": "dc-addons-bubble-chart",
   "version": "0.1.3",
+  "main": "./dist/dc-bubble-cloud.js",
   "dependencies": {
   },
   "repository": {
