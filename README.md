@@ -1,6 +1,8 @@
-# dc-addons
+# DC Addons Bubble Chart
 
-This [dc.js](http://dc-js.github.io/dc.js/) addon provides a bubble cloud for the dc namespace.
+This [dc.js](http://dc-js.github.io/dc.js/) addon provides a bubble cloud.
+
+[Demo](http://intellipharm.github.io/dc-addons/examples/bubble-cloud.html)
 
 ## Installation
 ```js
@@ -8,13 +10,11 @@ npm install dc-addons-bubble-chart --save
 yarn add dc-addons-bubble-chart
 ```
 
-```html
-<script src="node_modules/dc-addons-bubble-cloud/dist/dc-bubble-cloud.min.js"></script>
-```
-
 #### Usage
 ```js
-var chart = dc.bubbleCloud('#chart');
+import bubbleCloud from 'dc-addons-bubble-chart'
+
+var chart = bubbleCloud('#chart');
 
 // required options
 chart
@@ -46,6 +46,3 @@ chart
     .renderTitle(true)
 
 ```
-
-#### Examples
-  * [Bubble Cloud](http://intellipharm.github.io/dc-addons/examples/bubble-cloud.html)
